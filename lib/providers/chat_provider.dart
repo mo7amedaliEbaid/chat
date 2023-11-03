@@ -2,9 +2,10 @@ import 'dart:io';
 
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_storage/firebase_storage.dart';
-import 'package:chat_messanger/constants/constants.dart';
-import 'package:chat_messanger/models/models.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+
+import '../constants/firestore_constants.dart';
+import '../models/message_chat.dart';
 
 class ChatProvider {
   final SharedPreferences prefs;

@@ -3,7 +3,8 @@ import 'package:chat_messanger/constants/color_constants.dart';
 import 'package:chat_messanger/providers/auth_provider.dart';
 import 'package:provider/provider.dart';
 
-import 'pages.dart';
+import 'home_page.dart';
+import 'login_page.dart';
 
 class SplashPage extends StatefulWidget {
   SplashPage({super.key});

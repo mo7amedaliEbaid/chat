@@ -4,16 +4,21 @@ import 'dart:io';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
-import 'package:chat_messanger/constants/constants.dart';
-import 'package:chat_messanger/models/models.dart';
-import 'package:chat_messanger/providers/providers.dart';
+
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:intl/intl.dart';
 import 'package:provider/provider.dart';
 
-import '../widgets/widgets.dart';
-import 'pages.dart';
+import '../constants/color_constants.dart';
+import '../constants/firestore_constants.dart';
+import '../models/message_chat.dart';
+import '../providers/auth_provider.dart';
+import '../providers/chat_provider.dart';
+import '../widgets/loading_view.dart';
+import 'full_photo_page.dart';
+import 'login_page.dart';
+
 
 class ChatPage extends StatefulWidget {
   const ChatPage({super.key, required this.arguments});

@@ -4,13 +4,16 @@ import 'dart:io';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:chat_messanger/constants/constants.dart';
-import 'package:chat_messanger/models/models.dart';
-import 'package:chat_messanger/providers/providers.dart';
 import 'package:chat_messanger/widgets/loading_view.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:provider/provider.dart';
+
+import '../constants/app_constants.dart';
+import '../constants/color_constants.dart';
+import '../constants/firestore_constants.dart';
+import '../models/user_chat.dart';
+import '../providers/setting_provider.dart';
 
 class SettingsPage extends StatefulWidget {
   const SettingsPage({super.key});

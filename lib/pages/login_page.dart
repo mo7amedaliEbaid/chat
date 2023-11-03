@@ -5,8 +5,9 @@ import 'package:chat_messanger/providers/auth_provider.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:provider/provider.dart';
 
-import '../widgets/widgets.dart';
-import 'pages.dart';
+import '../widgets/loading_view.dart';
+import 'home_page.dart';
+
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});

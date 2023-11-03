@@ -1,3 +1,8 @@
+import 'package:chat_messanger/pages/splash_page.dart';
+import 'package:chat_messanger/providers/auth_provider.dart';
+import 'package:chat_messanger/providers/chat_provider.dart';
+import 'package:chat_messanger/providers/home_provider.dart';
+import 'package:chat_messanger/providers/setting_provider.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -10,8 +15,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 import 'constants/color_constants.dart';
 import 'firebase_options.dart';
-import 'pages/pages.dart';
-import 'providers/providers.dart';
+
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -65,7 +69,7 @@ class MyApp extends StatelessWidget {
         title: AppConstants.appTitle,
         theme: ThemeData(
           primaryColor: ColorConstants.themeColor,
-          primarySwatch: MaterialColor(0xfff5a623, ColorConstants.swatchColor),
+          primarySwatch: MaterialColor(0xff22c038, ColorConstants.swatchColor),
         ),
         home: SplashPage(),
         debugShowCheckedModeBanner: false,

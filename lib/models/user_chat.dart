@@ -1,5 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:chat_messanger/constants/constants.dart';
+
+import '../constants/firestore_constants.dart';
 
 class UserChat {
   final String id;

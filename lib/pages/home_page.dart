@@ -1,20 +1,28 @@
 import 'dart:async';
 import 'dart:io';
 
+import 'package:chat_messanger/pages/settings_page.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
-import 'package:chat_messanger/constants/constants.dart';
-import 'package:chat_messanger/providers/providers.dart';
-import 'package:chat_messanger/utils/utils.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:provider/provider.dart';
 
-import '../models/models.dart';
-import '../widgets/widgets.dart';
-import 'pages.dart';
+import '../constants/app_constants.dart';
+import '../constants/color_constants.dart';
+import '../constants/firestore_constants.dart';
+import '../models/popup_choices.dart';
+import '../models/user_chat.dart';
+import '../providers/auth_provider.dart';
+import '../providers/home_provider.dart';
+import '../utils/debouncer.dart';
+import '../utils/utilities.dart';
+import '../widgets/loading_view.dart';
+import 'chat_page.dart';
+import 'login_page.dart';
+
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -121,8 +129,8 @@ class HomePageState extends State<HomePage> {
 
   void showNotification(RemoteNotification remoteNotification) async {
     AndroidNotificationDetails androidPlatformChannelSpecifics = AndroidNotificationDetails(
-      Platform.isAndroid ? 'com.dfa.flutterchatdemo' : 'com.duytq.flutterchatdemo',
-      'Flutter chat demo',
+      Platform.isAndroid ? 'com.example.chatMessanger' : 'com.example.chatMessanger',
+      'chat',
       playSound: true,
       enableVibration: true,
       importance: Importance.max,

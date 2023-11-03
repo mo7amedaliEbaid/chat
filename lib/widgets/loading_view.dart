@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:chat_messanger/constants/constants.dart';
+import '../constants/color_constants.dart';
 
 class LoadingView extends StatelessWidget {
   @override

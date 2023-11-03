@@ -1,10 +1,12 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:chat_messanger/constants/constants.dart';
-import 'package:chat_messanger/models/models.dart';
+
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+
+import '../constants/firestore_constants.dart';
+import '../models/user_chat.dart';
 
 enum Status {
   uninitialized,
